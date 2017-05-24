@@ -1,0 +1,12 @@
+<h1>Our Kittens</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <% @kittens.each do |kit| %>
+      <div class="well">
+           <%= link_to kit.name, kitten_path(kit) %>
+           <%= link_to "Delete", kitten_path(kit), method: :delete,
+               data: {confirm: 'Are you sure?'}, class: 'pull-right' %>
+      </div>
+    <% end %>
+  </div>
+</div>

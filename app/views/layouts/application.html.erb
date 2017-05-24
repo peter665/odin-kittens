@@ -9,6 +9,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/header' %>
+    <% flash.each do |type, mes| %>
+      <div class="alert alert-<%= type %>">
+        <%=mes %>
+      </div>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

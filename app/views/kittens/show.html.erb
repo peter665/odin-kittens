@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <ul class="list-unstyled well">
+      <li>Name: <%= @kitten.name %></li>
+      <li>Age: <%= @kitten.age %></li>
+      <li>Softness: <%= @kitten.softness %></li>
+      <li>Cuteness: <%= @kitten.cuteness %></li>
+      <li> <%= link_to "Edit", edit_kitten_path(@kitten.id) %> </li>
+      <li> <%= link_to "Delete", kitten_path(@kitten.id), method: :delete,
+                                data: {confirm: 'Are you sure?'} %></li>
+    </ul>
+  </div>
+</div>
